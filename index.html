@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amazonia | Find Your Meal</title>
+    <!-- Link Font Awesome library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <!-- Link Google Fonts for custom fonts. Used Rock Salt and Potta One fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&family=Caveat&family=Dancing+Script&family=Homemade+Apple&family=Indie+Flower&family=Pacifico&family=Potta+One&family=Roboto&family=Rock+Salt&family=Satisfy&display=swap" rel="stylesheet">
+    
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    
+    <!-- Link to my custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Full body div -->
+    <div id="full-body">
+        <!-- Full body header section -->
+        <header id="header" class="container-fluid">
+            <!-- Header navbar -->
+            <nav id="nav" class="navbar navbar-dark fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">Amazonia</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                        aria-controls="offcanvasNavbar" onclick="showFavMealList()">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header" id="favourites-navbar">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: white;">
+                                Favourites
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <!-- This div is for showing favourite meals -->
+                        <div id="favourites-body" class="offcanvas-body d-flex justify-content-center flex-wrap">
+                            <div class="spinner-border text-success" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Header heading section -->
+            <div id="heading" class="container text-center">
+                <h1 id="appname">Amazonia</h1>
+            </div>
+            <!-- Header search bar section -->
+            <div id="search-bar" class="container text-center mt-5" onkeyup="showMealList()">
+                <input type="search" id="my-search" class="form-control" placeholder="Search for any meals..." />
+            </div>
+            <!-- Search bar text -->
+            <div id="heading-text" class="mt-3 text-start m-4">
+                <h5>Here's What We Found for You:</h5>
+            </div>
+        </header>
+        <!-- Full body main section -->
+        <main id="main" class="d-flex flex-wrap justify-content-center mt-5 mx-3">
+            <!-- Meal cards go here -->
+        </main>
+    </div>
+    <!-- Link to Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+    <!-- Link to my custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

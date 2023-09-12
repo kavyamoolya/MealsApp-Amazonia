@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset some default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Potta One', cursive;
+}
+
+/* Body styles */
+body {
+    width: 100%;
+    /* Background styles */
+    background-image: url(bg-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the background covers the entire viewport */
+    background-attachment: fixed; /* Optional: Fixed background scrolling. Added to fix background image issues in mobile devices */
+    color: white;
+}
+
+/* Header heading section styles */
+#heading {
+    margin-top: 100px;
+}
+
+/* Default font size for large screens */
+#appname {
+    font-size: 5rem;
+    font-family: 'Rock Salt', cursive !important;
+}
+
+/* Adjust font size for smaller screens (e.g., mobile devices) */
+/* If this is not added, we get a horizontal scrollbar. To avoid that, this was needed as I wanted larger font for bigger screens */
+@media (max-width: 768px) {
+    #appname {
+        font-size: 3rem;
+    }
+}
+
+/* Header navbar styles */
+#nav {
+    background-image: url(navred.jpg);
+    /* Box shadow for the header */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+/* Header search bar section styles */
+#search-bar {
+    margin-left: 0;
+    max-width: 100vw;
+}
+
+#search-bar input {
+    height: 70px;
+    border-radius: 20px;
+}
+
+/* Meal card styles */
+#card {
+    background-image: url(card-red.jpg);
+    padding: 20px;
+    margin: 0px 2px;
+    color: white;
+    font-size: 3rem;
+    /* Box shadow for cards */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#card img {
+    border-radius: 50%;
+}
+
+/* Meal details container styles */
+#meal-details {
+    background-image: url(card-red.jpg);
+    background-size: cover;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#meal-header {
+    width: 100%; /* To adjust to center the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#meal-thumbail img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 30%;
+    display: block; /* Added this to center the image */
+    margin: 0 auto; /* Added this to center the image */
+}
+
+/* Meal details container styles */
+#details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+}
+
+#meal-instruction {
+    margin: auto;
+    text-align: center;
+}
+
+/* Favourites offcanvas styles */
+#favourites-navbar {
+    background-image: url(navred.jpg);
+}
+
+#favourites-body {
+    background-image: url(bg-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
